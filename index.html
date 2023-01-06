@@ -55,51 +55,51 @@
           <fieldset class="logo-numer-invoid-wrapper">
             <div class="number-invoid-wrapper" data-preview>
               <span class="hashtag" data-preview>#</span>
-              <input type="number" min="0" placeholder="Numero di fattura" id="number-invoid" class="number-invoid" />
+              <input type="number" min="0" placeholder="Invoice number" id="number-invoid" class="number-invoid" />
             </div>
             <div class="image-drop-area" id="image-drop-area" data-preview>
               <div class="info-upload d-flex" data-preview>
                 <i class="ri-gallery-upload-line icon-upload"></i>
-                <p>Trascina il tuo logo qui</p>
+                <p>Drag your logo here</p>
                 <input type="file" id="choose-file" class="choose-file" />
               </div>
             </div>
           </fieldset>
 
           <fieldset class="date d-flex" id="date-info">
-            <p class="date-title">Data di emissione:</p>
-            <p id="today-date">5 Luglio 2021</p>
+            <p class="date-title">Invoice Date:</p>
+            <p id="today-date">July 6th 2022</p>
             <button class="btn modify-date" data-preview>
-              Modifica la data di emissione
+              Change date invoice
             </button>
           </fieldset>
 
           <fieldset class="sender-info">
-            <label for="sender">Mittente</label>
+            <label for="sender">Sender Name</label>
 
             <textarea class="sender" name="sender" id="sender" cols="30" rows="10"
-              placeholder="Nome della tua azienda, Indirizzo, Recapiti(e-mail, numero di telefono)"></textarea>
+              placeholder="Name / Company Name, Email Address, Phone"></textarea>
           </fieldset>
 
           <fieldset class="recipient-info">
-            <label for="recipient">Destinatario</label>
+            <label for="recipient">Recipient Name</label>
             <textarea class="recipient" name="recipient" id="recipient" cols="30" rows="10"
-              placeholder="Nome azienda destinatario, Indirizzo, Persona di riferimentoﬁœ"></textarea>
+              placeholder="Name / Company Name, Email Address, Phone"></textarea>
           </fieldset>
           <fieldset class="note-info">
-            <label for="notes">Note</label>
+            <label for="notes">Notes</label>
             <textarea class="notes" name="notes" id="notes" cols="30" rows="10"
-              placeholder="Opzionale: messaggio al destinatario"></textarea>
+              placeholder="Optional: Extra data"></textarea>
           </fieldset>
         </div>
 
         <div class="grid-description">
           <header class="details-title grid-details">
-            <p>Descrizione</p>
-            <p>Quantita'</p>
-            <p data-info="Prezzo Unitario">Prezzo u.</p>
-            <p>IVA%</p>
-            <p>Importo</p>
+            <p>Description</p>
+            <p>Quantity</p>
+            <p data-info="Prezzo Unitario">Unitary P.</p>
+            <p>VAT%</p>
+            <p>Amount</p>
           </header>
           <!-- <article class="details-content grid-details"> 
               <!-- <div>
@@ -123,21 +123,21 @@
         </div>
 
         <button id="add-item" class="btn btn-add-article" data-preview>
-          Nuovo articolo
+          New Item
         </button>
         <div class="subtotal-grid">
           <div class="summary-wrapper">
-            <div class="subtotal">Subtotale</div>
+            <div class="subtotal">Subtotal</div>
             <div class="subtotal-digit">€</div>
 
-            <div class="total">Totale</div>
+            <div class="total">Total</div>
             <div class="total-digit">€</div>
           </div>
         </div>
 
         <div class="footer-area d-flex">
           <fieldset class="bank-details-area">
-            <label for="bank-account">Conto Corrente Bancario</label>
+            <label for="bank-account">Bank Account</label>
             <input type="text" class="bank-account" id="bank-account" />
           </fieldset>
           <fieldset class="bic-swift-area">
@@ -146,11 +146,11 @@
           </fieldset>
 
           <fieldset class="reference-area">
-            <label for="reference">Riferimento</label>
+            <label for="reference">Referens</label>
             <input type="text" class="reference" id="reference" />
           </fieldset>
           <fieldset class="vat-number-area">
-            <label for="vat-number"> Partita IVA</label>
+            <label for="vat-number">VAT number</label>
             <input type="text" class="vat-number" id="vat-number" />
           </fieldset>
         </div>
@@ -158,12 +158,18 @@
 
       <div class="btn-final-wrapper d-flex" data-preview>
         <button type="submit" class="btn btn-preview" id="btn-preview">
-          Visualizza anteprima
+          Preview
         </button>
-        <button type="submit" class="btn btn-save-pdf">Salva PDF</button>
+        <button type="submit" class="btn btn-save-pdf">Save PDF</button>
       </div>
     </form>
   </div>
+  <footer>
+    <p class="container">
+
+    </p>
+    Made with ❤️ by Neil Chavez
+  </footer>
 
   <script src="./javascript.js"></script>
 </body>
