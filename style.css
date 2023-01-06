@@ -19,7 +19,7 @@ body {
 }
 *::placeholder,
 input {
-  font-family: inherit
+  font-family: inherit;
 }
 html {
   scroll-behavior: smooth;
@@ -44,7 +44,6 @@ fieldset {
 p {
   text-align: center;
 }
-
 button {
   cursor: pointer;
 }
@@ -64,7 +63,6 @@ textarea {
 }
 .justify-content-between {
   justify-content: space-around;
-  /* border: medium solid red; */
 }
 .container {
   max-width: 950px;
@@ -125,8 +123,6 @@ textarea {
 .nav-list .list-item {
   width: 100%;
   height: 100%;
-  /* border-left: thick solid var(--text-color);
-    border-right: thick solid var(--text-color); */
   border-bottom: thin solid var(--text-color);
   background-color: inherit;
 }
@@ -148,21 +144,10 @@ textarea {
   color: var(--bg-primary-color);
   background: var(--text-color);
 }
-/* .nav .hamburger-inner,
-.nav .hamburger-inner:after,
-.nav .hamburger-inner:before {
-  background-color: var(--text-color);
-} */
-/* .nav .hamburger.is-active .hamburger-inner,
-.nav .hamburger.is-active .hamburger-inner:after,
-.nav .hamburger.is-active .hamburger-inner:before {
-  background-color: var(--text-color);
-} */
 
 /* Hero section */
 .hero {
   min-height: calc(100vh - 3rem);
-  /* border: thick solid red; */
 }
 
 .hero h1 {
@@ -198,7 +183,6 @@ textarea {
 
 .form {
   /* 595 x 842 sizes of A4 */
-  /* background-color: rgb(249, 249, 249); */
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
   width: 100%;
   max-width: 595px;
@@ -282,7 +266,6 @@ input[type='file']::-webkit-file-upload-button {
 
 .head-area > * {
   flex-basis: 100%;
-  /* padding: 1rem 0; */
   flex-grow: 1;
   flex-shrink: 1;
 }
@@ -348,7 +331,7 @@ input[type='date'] {
   background-color: rgba(0, 0, 0, 0.1);
   padding: 0.1rem 0;
 }
-.details-title p{
+.details-title p {
   font-size: 0.8rem;
   text-align: left;
 }
@@ -428,10 +411,10 @@ input[type='date'] {
 /* Footer */
 footer {
   text-align: center;
-  margin-top:2rem;
+  margin-top: 2rem;
   padding: 0.5rem 0 1rem;
   background-color: #fff;
-  border-top: thin solid var(--border-clr)
+  border-top: thin solid var(--border-clr);
 }
 
 @media (min-width: 576px) {
@@ -491,12 +474,10 @@ footer {
     border-top: none;
   }
   .nav-list .item-link:hover {
-    /* color: var(--text-color);*/
     color: var(--text-white);
     background: transparent;
   }
   .nav {
-    /* padding: 0rem 2rem; */
     padding: 0;
   }
 }
@@ -510,7 +491,6 @@ footer {
     width: 100vw;
     max-width: 100%;
     background-color: transparent;
-
   }
   .btn-final-wrapper,
   .btn,
