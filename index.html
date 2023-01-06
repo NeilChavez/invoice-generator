@@ -1,96 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Generatore di fatture</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <h1>Generatore di Fatture</h1>
-    <div class="container relative">
-      <form id="form" data-preview class="form d-flex">
-        <div class="wrapper">
-          <div class="head-area">
-            <fieldset class="logo-numer-invoid-wrapper">
-              <div class="number-invoid-wrapper" data-preview>
-                <span class="hashtag" data-preview>#</span>
-                <input
-                  type="number"
-                  min="0"
-                  placeholder="Numero di fattura"
-                  id="number-invoid"
-                  class="number-invoid"
-                />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generatore di fatture</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css"
+    integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+
+  <header class="header ">
+    <nav class="nav container">
+      <a href="#" class="link-home">
+        <span>Invoice Generator</span>
+      </a>
+      <ul class="nav-list">
+        <li class="list-item">
+          <a href="#create-invoice" class="item-link">Create Invoice</a>
+        </li>
+      </ul>
+      <div class="hamburger-wrapper">
+        <button class="hamburger hamburger--collapse" aria-label="hamburger menu icon" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+
+  <section class="hero container d-flex">
+    <article>
+
+      <h1>Invoice Generator</h1>
+      <h2>Create invoices. Unlimited use. You're welcome.</h2>
+
+      <a href="#invoice-generator" class="btn">Get started</a>
+    </article>
+
+  </section>
+
+
+  <div id="invoice-generator" class="container relative">
+    <form id="form" data-preview class="form d-flex">
+      <div class="wrapper">
+        <div class="head-area">
+          <fieldset class="logo-numer-invoid-wrapper">
+            <div class="number-invoid-wrapper" data-preview>
+              <span class="hashtag" data-preview>#</span>
+              <input type="number" min="0" placeholder="Numero di fattura" id="number-invoid" class="number-invoid" />
+            </div>
+            <div class="image-drop-area" id="image-drop-area" data-preview>
+              <div class="info-upload d-flex" data-preview>
+                <i class="ri-gallery-upload-line icon-upload"></i>
+                <p>Trascina il tuo logo qui</p>
+                <input type="file" id="choose-file" class="choose-file" />
               </div>
-              <div class="image-drop-area" id="image-drop-area" data-preview>
-                <div class="info-upload d-flex" data-preview>
-                  <i class="ri-gallery-upload-line icon-upload"></i>
-                  <p>Trascina il tuo logo qui</p>
-                  <input type="file" id="choose-file" class="choose-file" />
-                </div>
-              </div>
-            </fieldset>
+            </div>
+          </fieldset>
 
-            <fieldset class="date d-flex" id="date-info">
-              <p class="date-title">Data di emissione:</p>
-              <p id="today-date">5 Luglio 2021</p>
-              <button class="btn modify-date" data-preview>
-                Modifica la data di emissione
-              </button>
-            </fieldset>
+          <fieldset class="date d-flex" id="date-info">
+            <p class="date-title">Data di emissione:</p>
+            <p id="today-date">5 Luglio 2021</p>
+            <button class="btn modify-date" data-preview>
+              Modifica la data di emissione
+            </button>
+          </fieldset>
 
-            <fieldset class="sender-info">
-              <label for="sender">Mittente</label>
+          <fieldset class="sender-info">
+            <label for="sender">Mittente</label>
 
-              <textarea
-                class="sender"
-                name="sender"
-                id="sender"
-                cols="30"
-                rows="10"
-                placeholder="Nome della tua azienda, Indirizzo, Recapiti(e-mail, numero di telefono)"
-              ></textarea>
-            </fieldset>
+            <textarea class="sender" name="sender" id="sender" cols="30" rows="10"
+              placeholder="Nome della tua azienda, Indirizzo, Recapiti(e-mail, numero di telefono)"></textarea>
+          </fieldset>
 
-            <fieldset class="recipient-info">
-              <label for="recipient">Destinatario</label>
-              <textarea
-                class="recipient"
-                name="recipient"
-                id="recipient"
-                cols="30"
-                rows="10"
-                placeholder="Nome azienda destinatario, Indirizzo, Persona di riferimentoﬁœ"
-              ></textarea>
-            </fieldset>
-            <fieldset class="note-info">
-              <label for="notes">Note</label>
-              <textarea
-                class="notes"
-                name="notes"
-                id="notes"
-                cols="30"
-                rows="10"
-                placeholder="Opzionale: messaggio al destinatario"
-              ></textarea>
-            </fieldset>
-          </div>
+          <fieldset class="recipient-info">
+            <label for="recipient">Destinatario</label>
+            <textarea class="recipient" name="recipient" id="recipient" cols="30" rows="10"
+              placeholder="Nome azienda destinatario, Indirizzo, Persona di riferimentoﬁœ"></textarea>
+          </fieldset>
+          <fieldset class="note-info">
+            <label for="notes">Note</label>
+            <textarea class="notes" name="notes" id="notes" cols="30" rows="10"
+              placeholder="Opzionale: messaggio al destinatario"></textarea>
+          </fieldset>
+        </div>
 
-          <div class="grid-description">
-            <header class="details-title grid-details">
-              <p>Descrizione</p>
-              <p>Quantita'</p>
-              <p data-info="Prezzo Unitario">Prezzo u.</p>
-              <p>IVA%</p>
-              <p>Importo</p>
-            </header>
-            <!-- <article class="details-content grid-details"> 
+        <div class="grid-description">
+          <header class="details-title grid-details">
+            <p>Descrizione</p>
+            <p>Quantita'</p>
+            <p data-info="Prezzo Unitario">Prezzo u.</p>
+            <p>IVA%</p>
+            <p>Importo</p>
+          </header>
+          <!-- <article class="details-content grid-details"> 
               <!-- <div>
                 <input type="text" class="description" data-preview/>
               </div>
@@ -109,51 +120,52 @@
                 <input type="text" class="amount" />
               </div>
                  </div> -->
-          </div>
+        </div>
 
-          <button id="add-item" class="btn btn-add-article" data-preview>
-            Nuovo articolo
-          </button>
-          <div class="subtotal-grid">
-            <div class="summary-wrapper">
-              <div class="subtotal">Subtotale</div>
-              <div class="subtotal-digit">€</div>
+        <button id="add-item" class="btn btn-add-article" data-preview>
+          Nuovo articolo
+        </button>
+        <div class="subtotal-grid">
+          <div class="summary-wrapper">
+            <div class="subtotal">Subtotale</div>
+            <div class="subtotal-digit">€</div>
 
-              <div class="total">Totale</div>
-              <div class="total-digit">€</div>
-            </div>
-          </div>
-
-          <div class="footer-area d-flex">
-            <fieldset class="bank-details-area">
-              <label for="bank-account">Conto Corrente Bancario</label>
-              <input type="text" class="bank-account" id="bank-account" />
-            </fieldset>
-            <fieldset class="bic-swift-area">
-              <label for="bic-swift">Bic-Swift</label>
-              <input type="text" class="bic-swift" id="bic-swift" />
-            </fieldset>
-
-            <fieldset class="reference-area">
-              <label for="reference">Riferimento</label>
-              <input type="text" class="reference" id="reference" />
-            </fieldset>
-            <fieldset class="vat-number-area">
-              <label for="vat-number"> Partita IVA</label>
-              <input type="text" class="vat-number" id="vat-number" />
-            </fieldset>
+            <div class="total">Totale</div>
+            <div class="total-digit">€</div>
           </div>
         </div>
 
-        <div class="btn-final-wrapper d-flex" data-preview>
-          <button type="submit" class="btn btn-preview" id="btn-preview">
-            Visualizza anteprima
-          </button>
-          <button type="submit" class="btn btn-save-pdf">Salva PDF</button>
-        </div>
-      </form>
-    </div>
+        <div class="footer-area d-flex">
+          <fieldset class="bank-details-area">
+            <label for="bank-account">Conto Corrente Bancario</label>
+            <input type="text" class="bank-account" id="bank-account" />
+          </fieldset>
+          <fieldset class="bic-swift-area">
+            <label for="bic-swift">Bic-Swift</label>
+            <input type="text" class="bic-swift" id="bic-swift" />
+          </fieldset>
 
-    <script src="./javascript.js"></script>
-  </body>
+          <fieldset class="reference-area">
+            <label for="reference">Riferimento</label>
+            <input type="text" class="reference" id="reference" />
+          </fieldset>
+          <fieldset class="vat-number-area">
+            <label for="vat-number"> Partita IVA</label>
+            <input type="text" class="vat-number" id="vat-number" />
+          </fieldset>
+        </div>
+      </div>
+
+      <div class="btn-final-wrapper d-flex" data-preview>
+        <button type="submit" class="btn btn-preview" id="btn-preview">
+          Visualizza anteprima
+        </button>
+        <button type="submit" class="btn btn-save-pdf">Salva PDF</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="./javascript.js"></script>
+</body>
+
 </html>

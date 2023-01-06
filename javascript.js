@@ -146,7 +146,7 @@ if (localStorage.getItem("items")) {
   itemsToDisplay.forEach((el) => {
     const values = {
       parent: $descriptionDetails,
-      description: el.text, 
+      description: el.text,
       quantity: el.quantity,
       unitPrice: el.unitPrice,
       VAT: el.VATPercentage
@@ -188,7 +188,7 @@ const renderDate = () => {
 
 // this instantiates a new Item entered by the user, and adds it to in the array list
 const addItems = (values) => {
-  let {text, quantity, unitPrice, VAT} = values;
+  let { text, quantity, unitPrice, VAT } = values;
   let obj = new Item(text, quantity, unitPrice, VAT);
   items.push(obj);
 };
@@ -203,7 +203,7 @@ const collectValueInputs = () => {
     $VATValues = d.querySelectorAll(".VAT");
 
   $descriptions.forEach((description, index) => {
-    const values ={
+    const values = {
       text: description.value,
       quantity: $quantities[index].value,
       unitPrice: $unitPrices[index].value,
@@ -231,7 +231,7 @@ $btnModifyDate.addEventListener("click", e => {
 });
 
 // the user can drag the image of his company logo, to put it in the header of the invoice
-$imageDropArea.addEventListener("dragover",  e  => {
+$imageDropArea.addEventListener("dragover", e => {
   e.preventDefault();
 });
 $imageDropArea.addEventListener("drop", function (e) {
@@ -254,20 +254,20 @@ $imageDropArea.addEventListener("click", e => {
   removePrevius();
 });
 
-$addItem.addEventListener("click",  e => {
+$addItem.addEventListener("click", e => {
   e.preventDefault();
-  const values ={
+  const values = {
     parent: $descriptionDetails,
     description: "",
     quantity: 1,
     unitPrice: 1,
     VAT: 0
-  }; 
+  };
   addInput(values);
 
 });
 
-$descriptionDetails.addEventListener("click", e =>{
+$descriptionDetails.addEventListener("click", e => {
   if (e.target.matches(".delete")) {
     const $deleteIcons = d.querySelectorAll(".delete"),
       index = Array.from($deleteIcons).indexOf(e.target),
@@ -277,7 +277,7 @@ $descriptionDetails.addEventListener("click", e =>{
   }
 });
 
-$descriptionDetails.addEventListener("keyup", e => {
+$descriptionDetails.addEventListener("change", e => {
   collectValueInputs();
 });
 
