@@ -14,7 +14,10 @@ const $imageDropArea = d.getElementById("image-drop-area"),
   $taxDigit = d.querySelector(".tax-digit"),
   $VATDigit = d.querySelector(".vat-digit"),
   $total = d.querySelector(".total-digit"),
-  $tax = d.querySelector(".tax");
+  $tax = d.querySelector(".tax"),
+  $header = d.querySelector(".header"),
+  $btnHamgurger = d.querySelector('.hamburger'),
+  $navList = d.querySelector('.nav-list');
 
 // the invoice items entered by the user will be stored in this array.
 let items = [];
@@ -292,3 +295,15 @@ $btnPreviewPrint.addEventListener("click", e => {
     window.print();
   }
 });
+
+// Hamburger menu 
+$header.addEventListener('click', e => {
+  if (e.target.matches(".hamburger-wrapper") || e.target.matches(".hamburger-wrapper *")) {
+      $btnHamgurger.classList.toggle('is-active')
+      $navList.classList.toggle("is-active");
+  }
+  if (e.target.matches(".list-item") || e.target.matches(".list-item *")) {
+      $btnHamgurger.classList.remove('is-active')
+      $navList.classList.remove("is-active");
+  }
+}) 
