@@ -297,13 +297,20 @@ $btnPreviewPrint.addEventListener("click", e => {
 });
 
 // Hamburger menu 
-$header.addEventListener('click', e => {
+d.addEventListener('click', e => {
+  if ($btnHamgurger.classList.contains('is-active')) {
+    $btnHamgurger.classList.remove('is-active')
+    $navList.classList.remove("is-active");
+    return;
+  }
   if (e.target.matches(".hamburger-wrapper") || e.target.matches(".hamburger-wrapper *")) {
-      $btnHamgurger.classList.toggle('is-active')
-      $navList.classList.toggle("is-active");
+    $btnHamgurger.classList.toggle('is-active')
+    $navList.classList.toggle("is-active");
+    return;
   }
   if (e.target.matches(".list-item") || e.target.matches(".list-item *")) {
-      $btnHamgurger.classList.remove('is-active')
-      $navList.classList.remove("is-active");
+    $btnHamgurger.classList.remove('is-active')
+    $navList.classList.remove("is-active");
+    return;
   }
-}) 
+})
