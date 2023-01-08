@@ -144,7 +144,21 @@ textarea {
   color: var(--bg-primary-color);
   background: var(--text-color);
 }
+.hamburger{
+  width: 2rem;
+  height: 2rem;
+}
 
+.nav .hamburger-inner,
+.nav .hamburger-inner:after,
+.nav .hamburger-inner:before {
+  background-color: #000
+}
+.nav .hamburger.is-active .hamburger-inner,
+.nav .hamburger.is-active .hamburger-inner:after,
+.nav .hamburger.is-active .hamburger-inner:before {
+  background-color: #000;
+}
 /* Hero section */
 .hero {
   min-height: calc(100vh - 3rem);
@@ -180,7 +194,9 @@ textarea {
   color: #000;
   box-shadow: 0px 0px 20px 15px #df0dd122;
 }
-
+.section-invoice-generator{
+  padding-top: 3rem;
+}
 .form {
   /* 595 x 842 sizes of A4 */
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
@@ -491,12 +507,12 @@ footer {
     row-gap: 2rem;
   }
   [data-printable] {
-    padding: 0;
+    padding: 1rem;
     margin-top: 0;
     max-width: 200mm;
-    max-height: 290mm;
+    max-height: 280mm;
     position: relative;
-    height: 290mm;
+    height: 280mm;
     width: 200mm;
   }
   .form {

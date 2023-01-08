@@ -5,8 +5,15 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Generatore di fatture</title>
+  <title>Invoice Generator</title>
+  <meta name="description" content="This invoice tool can generate invoices to print them out">
+  <meta name="keywords" content="Invoice, generator, print">
+  <meta name="author" content="John Doe">
+  <link rel="shortcut icon" type="image/svg" href="./assets/invoice-generator-icon.svg"/>
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css"
+  integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./style.css" />
 </head>
 
@@ -18,7 +25,7 @@
       </a>
       <ul class="nav-list">
         <li class="list-item">
-          <a href="#create-invoice" class="item-link">Create Invoice</a>
+          <a href="#invoice-generator" class="item-link">Create Invoice</a>
         </li>
       </ul>
       <div class="hamburger-wrapper">
@@ -44,7 +51,7 @@
   </section>
 
 
-  <div id="invoice-generator" data-printable class="container relative">
+  <section id="invoice-generator" data-printable class="section-invoice-generator container relative">
     <form id="form" data-preview class="form d-flex">
       <div class="wrapper">
         <div class="head-area">
@@ -159,13 +166,13 @@
         <button type="submit" class="btn btn-save-pdf">Save PDF</button>
       </div>
     </form>
-  </div>
+  </section>
   <footer>
     <p class="container">
       Made with ❤️ by Neil Chavez
     </p>
   </footer>
-  <script src="./javascript.js" type="module"></script>
+  <script src="./javascript.js" defer type="module"></script>
 </body>
 
 </html>
