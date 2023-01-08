@@ -7,15 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Generatore di fatture</title>
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css"
-    integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
-
-  <header class="header ">
+  <header class="header">
     <nav class="nav container">
       <a href="#" class="link-home">
         <span>Invoice Generator</span>
@@ -48,7 +44,7 @@
   </section>
 
 
-  <div id="invoice-generator" class="container relative">
+  <div id="invoice-generator" data-printable class="container relative">
     <form id="form" data-preview class="form d-flex">
       <div class="wrapper">
         <div class="head-area">
@@ -92,67 +88,67 @@
               placeholder="Optional: Extra data"></textarea>
           </fieldset>
         </div>
-
-        <div class="grid-description">
-          <header class="details-title grid-details">
-            <p>Description</p>
-            <p>Quantity</p>
-            <p data-info="Prezzo Unitario">Unitary P.</p>
-            <p>VAT%</p>
-            <p>Amount</p>
-          </header>
-          <!-- <article class="details-content grid-details"> 
-              <!-- <div>
-                <input type="text" class="description" data-preview/>
-              </div>
-              <div>
-                <input type="text" class="quantity" data-preview/>
-              </div>
-              <div>
-                <input type="text" class="unit-price" data-preview />
-              </div>
-              <div>
-                <input type="text" class="VAT" data-preview />
-              </div> 
-       <div class="amount-wrapper">
-                <span class="amount"> € 00.00</span>
-                <i class="ri-delete-bin-line delete" data-preview></i>
-                <input type="text" class="amount" />
-              </div>
-                 </div> -->
-        </div>
-
-        <button id="add-item" class="btn btn-add-article" data-preview>
-          New Item
-        </button>
-        <div class="subtotal-grid">
-          <div class="summary-wrapper">
-            <div class="subtotal">Subtotal</div>
-            <div class="subtotal-digit">€</div>
-
-            <div class="total">Total</div>
-            <div class="total-digit">€</div>
+        <div class="invoice-details-area">
+          <div class="grid-description">
+            <header class="details-title grid-details">
+              <p>Description</p>
+              <p>Quantity</p>
+              <p data-info="Prezzo Unitario">Unitary P.</p>
+              <p>VAT%</p>
+              <p>Amount</p>
+            </header>
+            <!-- <article class="details-content grid-details"> 
+                <!-- <div>
+                  <input type="text" class="description" data-preview/>
+                </div>
+                <div>
+                  <input type="text" class="quantity" data-preview/>
+                </div>
+                <div>
+                  <input type="text" class="unit-price" data-preview />
+                </div>
+                <div>
+                  <input type="text" class="VAT" data-preview />
+                </div> 
+         <div class="amount-wrapper">
+                  <span class="amount"> € 00.00</span>
+                  <i class="ri-delete-bin-line delete" data-preview></i>
+                  <input type="text" class="amount" />
+                </div>
+                   </div> -->
           </div>
-        </div>
+          <button id="add-item" class="btn btn-add-article" data-preview>
+            New Item
+          </button>
+          <div class="subtotal-grid">
+            <div class="summary-wrapper">
+              <div class="subtotal">Subtotal</div>
+              <div class="subtotal-digit">€</div>
 
-        <div class="footer-area d-flex">
-          <fieldset class="bank-details-area">
-            <label for="bank-account">Bank Account</label>
-            <input type="text" class="bank-account" id="bank-account" />
-          </fieldset>
-          <fieldset class="bic-swift-area">
-            <label for="bic-swift">Bic-Swift</label>
-            <input type="text" class="bic-swift" id="bic-swift" />
-          </fieldset>
+              <div class="total">Total</div>
+              <div class="total-digit">€</div>
+            </div>
+          </div>
+          <div></div>
+          <div class="footer-area d-flex">
+            <fieldset class="bank-details-area">
+              <label for="bank-account">Bank Account</label>
+              <input type="text" class="bank-account" id="bank-account" />
+            </fieldset>
+            <fieldset class="bic-swift-area">
+              <label for="bic-swift">Bic-Swift</label>
+              <input type="text" class="bic-swift" id="bic-swift" />
+            </fieldset>
 
-          <fieldset class="reference-area">
-            <label for="reference">Referens</label>
-            <input type="text" class="reference" id="reference" />
-          </fieldset>
-          <fieldset class="vat-number-area">
-            <label for="vat-number">VAT number</label>
-            <input type="text" class="vat-number" id="vat-number" />
-          </fieldset>
+            <fieldset class="reference-area">
+              <label for="reference">Referens</label>
+              <input type="text" class="reference" id="reference" />
+            </fieldset>
+            <fieldset class="vat-number-area">
+              <label for="vat-number">VAT number</label>
+              <input type="text" class="vat-number" id="vat-number" />
+            </fieldset>
+          </div>
         </div>
       </div>
 
@@ -166,12 +162,10 @@
   </div>
   <footer>
     <p class="container">
-
+      Made with ❤️ by Neil Chavez
     </p>
-    Made with ❤️ by Neil Chavez
   </footer>
-
-  <script src="./javascript.js"></script>
+  <script src="./javascript.js" type="module"></script>
 </body>
 
 </html>

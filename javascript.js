@@ -38,7 +38,7 @@ Item.prototype.getVAT = function () {
 
 //add a new input line for a description, price and VAT
 const addInput = (values) => {
-  let {parent, description, quantity, unitPrice, VAT} = values;
+  let { parent, description, quantity, unitPrice, VAT } = values;
   const $inputArea = d.createElement("article");
 
   $inputArea.innerHTML = `
